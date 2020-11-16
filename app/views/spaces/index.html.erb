@@ -5,8 +5,8 @@
     <li>
       <ul>
         <li><strong>Location:</strong> <%= s.location %> </li>
-        <li><strong>Volume:</strong> <%= s.volume %> m<sup>3</sup> </li>
-        <li><strong>Price (per month):</strong> <%= s.price_per_month %> &euro; </li>
+        <li><strong>Volume:</strong> <%= s.volume.round(1) %> m<sup>3</sup> </li>
+        <li><strong>Price (per month):</strong> <%= sprintf('%.2f', s.price_per_month) %> &euro; </li>
       </ul>
     </li>
   <% end %>
