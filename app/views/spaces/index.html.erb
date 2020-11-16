@@ -1,2 +1,14 @@
-<h1>Spaces#index</h1>
-<p>Find me in app/views/spaces/index.html.erb</p>
+<h1>Available spaces</h1> <!-- includes those currently rented out #index view -->
+
+<ul id="spaces">
+  <% @spaces.each do |s| %>
+    <li>
+      <ul>
+        <li><strong>Location:</strong> <%= s.location %> </li>
+        <li><strong>Volume:</strong> <%= s.volume %> m<sup>3</sup> </li>
+        <li><strong>Price (per month):</strong> <%= s.price_per_month %> &euro; </li>
+      </ul>
+    </li>
+  <% end %>
+</ul>
+
