@@ -3,6 +3,7 @@ class SpacesController < ApplicationController
   end
 
   def show
+    @space = Space.find(space_params[:id])
   end
 
   def new
