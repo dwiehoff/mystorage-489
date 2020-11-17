@@ -1,0 +1,50 @@
+// body {
+//     font-family: Helvetica, sans-serif;
+//     font-size: 0.8em;
+//   }
+  div .month {
+    font-size: 0.3em;
+    font-weight: lighter;
+  }
+  div .date {
+    font-size: 0.8em;
+    font-weight: bolder;
+    color: #0000f6;
+    /*padding-left: 5px;*/
+  }
+
+  div.list {
+
+  }
+
+  div.date_block {
+    background-color: rgb(255, 255, 255);
+    user-select: none;
+    margin: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 6px 2px;
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    font-size: 38px;
+    flex-direction: column;
+    text-align: center;
+    transition: opacity 0.15s linear 0s;
+  }
+  div.date_block:hover {
+    background-color: #0000f6;
+    color: white;
+  }
+  div.date_block:hover .date {
+    color: white;
+  }
+
+  .reserved_date {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    margin: 10px 0;
+  }
