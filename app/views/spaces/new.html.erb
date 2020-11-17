@@ -3,7 +3,7 @@
 
   <h3><b>Create an offer</b></h3>
   <%= cl_image_tag @storage.photo.key, height: 200, width: 400, crop: :fill %>
-  <h1>Take <%= @storage.name %> Home!</h1>
+  <h1>Book <%= @storage.name %> today</h1>
 
   <%= simple_form_for ([@storage, @offer])  do |f| %>
   <%= f.input :start_date, as: :date, html5:true %>
