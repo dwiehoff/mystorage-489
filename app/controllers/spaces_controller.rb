@@ -5,32 +5,22 @@ class SpacesController < ApplicationController
   end
 
   def show
-    @space = Space.find(params[:id])
   end
 
   def new
-    @space = current_user.spaces.build
+    @space = Space.new
   end
 
   def create
-    @space = current_user.spaces.build(space_params)
-
+    @space = Space.new(space_params)
+    @space.user = current_user
     if @space.save
-      redirect_to listing_space_path(@space), notice: "Saved Success"
+      flash[:notice] = 'space added!'
+      redirect_to space_path(@space)
     else
-      flash[:alert] = @space.errors.full_messages
       render :new
     end
   end
-  # def create
-  #   @space = Space.new(space_params)
-  #   if @space.save
-  #     flash[:notice] = 'space added!'
-  #     redirect_to space_path(@space)
-  #   else
-  #     render :new
-  #   end
-  # end
 
   def edit
   end
@@ -39,5 +29,11 @@ class SpacesController < ApplicationController
   end
 
   def destroy
+  end
+
+  private 
+
+  def space_params
+    params.require(:space).permit(:location, :volume, :price_per_month)
   end
 end
