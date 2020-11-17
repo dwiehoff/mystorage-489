@@ -1,5 +1,6 @@
 class Space < ApplicationRecord
   belongs_to :user
+  has_one_attached :image
 
   validates :location, presence: true
   validates :volume, numericality: { greater_than: 0 }
