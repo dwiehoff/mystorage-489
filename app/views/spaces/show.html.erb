@@ -2,30 +2,32 @@
 <p>What do you think?</p>
 
 <ul>
-<li><strong>Location:</strong> <%= @space.location %></li>
-<li><strong>Volume:</strong> <%= @space.volume %> m<sup>3</sup></li>
-<li><strong>Price:</strong> <%= @space.price_per_month %> Euros per month</li>
-<li><strong>Condition:</strong> <%= @space.condition %></li>
-<li><strong>Access:</strong> <%= @space.access %></li>
-<li><strong>Description:</strong> <%= @space.description %></li>
+  <li><strong>Location:</strong> <%= @space.location %></li>
+  <li><strong>Volume:</strong> <%= @space.volume %> m<sup>3</sup></li>
+  <li><strong>Price:</strong> <%= @space.price_per_month %> Euros per month</li>
+  <li><strong>Condition:</strong> <%= @space.condition %></li>
+  <li><strong>Access:</strong> <%= @space.access %></li>
+  <li><strong>Description:</strong> <%= @space.description %></li>
 </ul>
 
 <%= link_to "BOOK THIS SPACE", new_space_reservation_path(@space), class: 'btn btn-outline-danger' %>
 <%= link_to "VIEW ALL SPACES", spaces_path, class: 'btn btn-outline-primary' %>
 
 <div class="map" style="background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=<%= @space.location %>&zoom=13&scale=2&size=1000x1000&maptype=roadmap&markers=color:red%7C<%= @space.location %>&key=AIzaSyBtaHK-BLhBg7TruJu8iKk_wETqZMJM-GY')"></div>
-</div>
 
-<h4>This space is booked for those dates</h2>
-<div class="list-group">
-  <% @space.reservations.each do |reservation| %>
-  <div class="cards">
-    <ul class="list-inline">
-      <li class="list-inline-item">Reservation</li>
-        <p class="list-group-item"><%= reservation.start_date %></p>
-        <p class="list-group-item"><%= reservation.end_date %></p>
-    </ul>
+<% if !@space.reservations.count.zero? %>
+  <h4 class="mt-3">This space is currently booked for the following dates</h2>
+  <div class="list">
+    <% @space.reservations.each do |reservation| %>
+      <div class="reserved_date">
+        <div class="date_block">
+          <span class="month"><%= reservation.start_date.strftime("%B")[0..2] %></span> <span class="date"><%= reservation.start_date.strftime("%d") %></span>
+        </div>
+        <span> – </span>
+        <div class="date_block">
+          <span class="month"><%= reservation.end_date.strftime("%B")[0..2] %></span> <span class="date"><%= reservation.end_date.strftime("%d") %></span>
+        </div>
+      </div>
+    <% end %>
   </div>
-
-  <% end %>
-</div>
+<% end %>
