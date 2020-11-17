@@ -1,20 +1,18 @@
 <h1>Spaces#new</h1>
 <p>Find me in app/views/spaces/new.html.erb</p>
 
-<br>
-<div class = "mx-auto" style="width: 400px;">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1>Create new Storage</h1>
 
-  <h3><b>Create an offer</b></h3>
-  <%= cl_image_tag @storage.photo.key, height: 200, width: 400, crop: :fill %>
-  <h1>Book <%= @storage.name %> today</h1>
-
-  <%= simple_form_for ([@storage, @offer])  do |f| %>
-  <%= f.input :start_date, as: :date, html5:true %>
-  <%= f.input :end_date, as: :date, html5:true %>
-  <%= f.submit "Make a offer", class: "btn btn-primary btn-block"%>
-  <% end %>
-  <%= link_to "Back to all storages", storages_path, class: "btn btn-light btn-block"%>
-
+      <%= simple_form_for @space do |f| %>
+        <%= f.input :location %>
+        <%= f.input :volume, as: :integer %>
+        <%= f.input :price_per_month, as: :integer %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
 </div>
-<br>
-=======
+

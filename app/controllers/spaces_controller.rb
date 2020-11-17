@@ -8,19 +8,28 @@ class SpacesController < ApplicationController
   end
 
   def new
-    @offer = Offer.find(params[:offer_id])
-    @storage = Storage.new
+    @space = current_user.spaces.build
   end
 
   def create
-    @offer = Offer.find(params[:offer_id])
-    @storage = Storage.new(storage_params)
-    @storage.offer = @offer
-    if @storage.save
-      redirect_to offer_path(@offer)
+    @space = current_user.spaces.build(space_params)
+
+    if @space.save
+      redirect_to listing_space_path(@space), notice: "Saved Success"
     else
+      flash[:alert] = @space.errors.full_messages
       render :new
     end
+  end
+  # def create
+  #   @space = Space.new(space_params)
+  #   if @space.save
+  #     flash[:notice] = 'space added!'
+  #     redirect_to space_path(@space)
+  #   else
+  #     render :new
+  #   end
+  # end
 
   def edit
   end
