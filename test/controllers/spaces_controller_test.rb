@@ -36,6 +36,4 @@ class SpacesControllerTest < ActionDispatch::IntegrationTest
     get spaces_update_url
     assert_response :success
   end
-
->>>>>>> master
 end

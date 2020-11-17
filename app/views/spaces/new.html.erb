@@ -8,8 +8,8 @@
 
       <%= simple_form_for @space do |f| %>
         <%= f.input :location %>
-        <%= f.input :volume, as: :integer %>
-        <%= f.input :price_per_month, as: :integer %>
+        <%= f.input :volume, as: :float, inline_label: 'm³' %>
+        <%= f.input :price_per_month, as: :float, inline_label: '€' %>
         <%= f.button :submit, class: 'btn btn-primary' %>
       <% end %>
     </div>
