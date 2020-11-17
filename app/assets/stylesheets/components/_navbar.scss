@@ -16,3 +16,11 @@
   text-decoration: none;
   color: #fca311 !important;
 }
+
+.nav-item {
+  padding: 0 4px;
+  &.active {
+    border: 1px solid navy;
+    border-radius: 4px;
+  }
+}

@@ -1,8 +1,10 @@
 class SpacesController < ApplicationController
   def index
+    @spaces = Space.all # all spaces, available or not
   end
 
   def show
+    @space = Space.find(params[:id])
   end
 
   def new
