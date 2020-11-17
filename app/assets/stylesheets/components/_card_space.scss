@@ -1,3 +1,18 @@
+ul#spaces > a {
+  text-decoration: none;
+  color: #0E0000;
+  display: block;
+  max-width: 500px;
+
+  &:hover .card-space {
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  }
+}
+
+.card-space {
+  transition: all .3s ease-out;
+}
+
 ul.spaces, ul.card-space-details {
   list-style-type: none;
   padding-left: none;
@@ -7,7 +22,6 @@ ul.spaces, ul.card-space-details {
   overflow: hidden;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  max-width: 500px;
 
   &:first-of-type {
     margin-top: 30px !important;
