@@ -13,14 +13,23 @@
 @import "pages/index";
 
 body {
-font-family: sans-serif;
+font-family: sans-serif, Poppins;
 font-size: 14px;
 line-height: 1.43;
-color: orange;
-background-color: black;
+margin: 0;
+font-family: Open Sans;
+color: #fca311;
+background-color: #14213d;
+}
+
+h1, h2, h3, h4 {
+  font-family: Poppins;
 }
 
 footer {
   display: block;
   text-align:center;
+  padding-bottom: 1px;
+  color:white
 }
+

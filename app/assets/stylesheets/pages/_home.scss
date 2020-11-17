@@ -1,11 +1,26 @@
 // Specific CSS for your home-page
-
+.container {
+  margin-bottom: 500px;
+}
 
 .cards {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
     height: 200px;
+    color:#fca311;
+  }
+  .card_text {
+    width: 200px;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgb(230,230,230);
+    margin-left: 50px;
+  }
+   .card_text img {
+    height: 100px;
+    width: 100%;
+
   }
 
   .card1 {
@@ -21,12 +36,8 @@
     width: 100%;
   }
 
-  .card1 h4 {
-    font-weight: bold;
-    color: black;
-    }
 .card1 p {
-  color: grey;
+  color: #fca311;
     }
 
   .card2 {
@@ -42,12 +53,8 @@
     width: 100%;
   }
 
-  .card2 h4 {
-    font-weight: bold;
-    color: black;
-    }
     .card2 p {
-  color: grey;
+  color: #fca311;
     }
 
   .card3 {
@@ -61,17 +68,14 @@
     height: 100px;
     width: 100%;
   }
-  .card3 h4 {
-    font-weight: bold;
-    color: black;
-    }
     .card3 p {
-  color: grey;
+  color: #fca311;
     }
     h3  {
       text-align: center;
     }
+
     footer {
-      background-color: grey;
+      background-color: #474342;
       height: 100px;
     }
