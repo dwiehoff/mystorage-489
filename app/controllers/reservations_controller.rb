@@ -7,9 +7,15 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
-    @reservation = Reservation.find(params[:space_id])
-    @reservation.save
-    redirect_to space_path(@space)
+    @space = Space.find(params[:space_id])
+    @reservation.space = @space
+    @reservation.user = current_user
+    @reservation.is_confirmed = false
+    if @reservation.save
+      redirect_to space_path(@space)
+    else
+      render :new
+    end
   end
 
   private
