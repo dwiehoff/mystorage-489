@@ -1,4 +1,12 @@
 class SpacesController < ApplicationController
+
+  def index
+    @spaces = Space.all # all spaces, available or not
+  end
+
+  def show
+  end
+
   def new
     @offer = Offer.find(params[:offer_id])
     @storage = Storage.new
@@ -13,5 +21,13 @@ class SpacesController < ApplicationController
     else
       render :new
     end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
   end
 end
