@@ -1,6 +1,77 @@
 // Specific CSS for your home-page
 
-// .cards {
-//   display: flex;
-//   justify-content: space-between;
-// }
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    height: 200px;
+  }
+
+  .card1 {
+    width: 200px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgb(230,230,230);
+    text-align: center;
+    border: 1px solid rgb(230,230,230);
+  }
+
+  .card1 img {
+    height: 100px;
+    width: 100%;
+  }
+
+  .card1 h4 {
+    font-weight: bold;
+    color: black;
+    }
+.card1 p {
+  color: grey;
+    }
+
+  .card2 {
+    width: 200px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgb(230,230,230);
+    text-align: center;
+    border: 1px solid rgb(230,230,230);
+    }
+
+  .card2 img {
+    height: 100px;
+    width: 100%;
+  }
+
+  .card2 h4 {
+    font-weight: bold;
+    color: black;
+    }
+    .card2 p {
+  color: grey;
+    }
+
+  .card3 {
+    width: 200px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgb(230,230,230);
+    text-align: center;
+    border: 1px solid rgb(230,230,230);
+    }
+  .card3 img {
+    height: 100px;
+    width: 100%;
+  }
+  .card3 h4 {
+    font-weight: bold;
+    color: black;
+    }
+    .card3 p {
+  color: grey;
+    }
+    h3  {
+      text-align: center;
+    }
+    footer {
+      background-color: grey;
+      height: 100px;
+    }
