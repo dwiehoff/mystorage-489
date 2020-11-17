@@ -1,14 +1,17 @@
-<h1>Spaces#show</h1>
-<p>Find me in app/views/spaces/show.html.erb</p>
+<h1>Check out this space!</h1>
+<p>What do you think?</p>
 
-<ul class="list-group">
-    <li class="list-group-item">
-      <%= @space.location %>
-      <%= @space.description %>
-      <%= @space.volume %>
-      <%= @space.price_per_month %>
-      </li>
-  <% end %>
+<ul>
+<li><strong>Location:</strong> <%= @space.location %></li>
+<li><strong>Volume:</strong> <%= @space.volume %> m<sup>3</sup></li>
+<li><strong>Price:</strong> <%= @space.price_per_month %> Euros per month</li>
+<li><strong>Condition:</strong> <%= @space.condition %></li>
+<li><strong>Access:</strong> <%= @space.access %></li>
+<li><strong>Description:</strong> <%= @space.description %></li>
+</ul>
 
-<%= link_to "BOOK THIS SPACE", new_space_reservation_path(@space) %>
-<%= link_to "VIEW ALL SPACES", spaces_path %>
+<%= link_to "BOOK THIS SPACE", new_user_registration_path(@space), class: 'btn btn-outline-danger' %>
+<%= link_to "VIEW ALL SPACES", spaces_path, class: 'btn btn-outline-primary' %>
+
+<div class="map" style="background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=<%= @space.location %>&zoom=13&scale=2&size=1000x1000&maptype=roadmap&markers=color:red%7C<%= @space.location %>&key=AIzaSyBtaHK-BLhBg7TruJu8iKk_wETqZMJM-GY')"></div>
+</div>
