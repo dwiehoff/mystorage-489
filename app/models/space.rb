@@ -1,7 +1,7 @@
 class Space < ApplicationRecord
   belongs_to :user
   has_many :reservations, dependent: :destroy
-  has_one_attached :photo
+  has_one_attached :image
 
   validates :location, presence: true
   validates :volume, numericality: { greater_than: 0 }
