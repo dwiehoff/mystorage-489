@@ -2,13 +2,18 @@
 
 <ul id="spaces">
   <% @spaces.each do |s| %>
-    <li>
-      <ul>
-        <li><strong>Location:</strong> <%= s.location %></li>
-        <li><strong>Volume:</strong> <%= s.volume.round(1) %> m<sup>3</sup></li>
-        <li><strong>Price (per month):</strong> <%= sprintf('%.2f', s.price_per_month) %> &euro;</li>
-      </ul>
-    </li>
+    <%= link_to space_path(s) do  %>
+    <div class="link-wrapper">
+      <li class="card-space mt-3">
+        <img src="https://images.unsplash.com/photo-1581143761812-6d1474cdb9d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60">
+        <ul class="card-space-details">
+          <li><strong>Location</strong> <br> <%= s.location.split(',')[0] %></li>
+          <li><strong>Volume</strong> <br> <%= s.volume.round(1) %> m<sup>3</sup></li>
+          <li><strong>Price (per month)</strong> <br> <%= sprintf('%.2f', s.price_per_month) %> &euro;</li>
+        </ul>
+      </li>
+    </div>
+    <% end %>
   <% end %>
 </ul>
 

@@ -10,7 +10,9 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/card_space";
 @import "pages/index";
+@import "components/card_reservations";
 
 body {
 font-size: 14px;
@@ -29,6 +31,6 @@ footer {
   display: block;
   text-align:center;
   padding-bottom: 1px;
-  color:white
+  color:white;
 }
 
