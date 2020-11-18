@@ -1,11 +1,11 @@
 class SpacesController < ApplicationController
 
   def index
-    @spaces = Space.all # all spaces, available or not
+    @spaces = Space.all # all spaces, available or not; TODO: filter 'available' + map
   end
 
   def show
-    @space = Space.find(params[:id])
+    @space = Space.find(params[:id]) # TODO: add image/map/etc.
   end
 
   def new
@@ -24,6 +24,7 @@ class SpacesController < ApplicationController
   end
 
   def edit
+    # TODO: edit own space including availability schedule
   end
 
   def update
@@ -33,6 +34,10 @@ class SpacesController < ApplicationController
     @space = Space.find(params[:id])
     @space.destroy
     redirect_to spaces_path
+  end
+
+  def my_spaces
+    # TODO: show personal spaces in own view; ability to confirm reservation inline
   end
 
   def space_params

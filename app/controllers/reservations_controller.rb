@@ -1,4 +1,7 @@
 class ReservationsController < ApplicationController
+  def index
+    # TODO
+  end
 
   def new
     @space = Space.find(params[:space_id])
@@ -12,7 +15,7 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user
     @reservation.is_confirmed = false
     if @reservation.save
-      redirect_to space_path(@space)
+      redirect_to space_path(@space) # TODO: reservations_path
     else
       render :new
     end
