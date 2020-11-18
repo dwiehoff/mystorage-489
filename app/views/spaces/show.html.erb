@@ -2,12 +2,12 @@
 <p>What do you think?</p>
 
 <ul>
-  <li><strong>Location:</strong> <%= @space.location %></li>
-  <li><strong>Volume:</strong> <%= @space.volume %> m<sup>3</sup></li>
-  <li><strong>Price:</strong> <%= @space.price_per_month %> Euros per month</li>
-  <li><strong>Condition:</strong> <%= @space.condition %></li>
-  <li><strong>Access:</strong> <%= @space.access %></li>
-  <li><strong>Description:</strong> <%= @space.description %></li>
+  <%= display_li_if_exists('location', 'Location') %>
+  <%= display_li_if_exists('volume', 'Volume', 'm<sup>3</sup>') %>
+  <%= display_li_if_exists('price_per_month', 'Price', '&euro; per month') %>
+  <%= display_li_if_exists('condition', 'Condition') %>
+  <%= display_li_if_exists('access', 'Access') %>
+  <%= display_li_if_exists('description', 'Description') %>
 </ul>
 
 <%= link_to "BOOK THIS SPACE", new_space_reservation_path(@space), class: 'btn btn-outline-primary' %>
