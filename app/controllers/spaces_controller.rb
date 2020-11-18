@@ -22,7 +22,7 @@ class SpacesController < ApplicationController
   def destroy
     @space = Space.find(params[:id])
     @space.destroy
-    redirect_to space_path(@space)
+    redirect_to spaces_path
   end
 
   def space_params
