@@ -29,6 +29,9 @@ class SpacesController < ApplicationController
   end
 
   def destroy
+    @space = Space.find(params[:id])
+    @space.destroy
+    redirect_to spaces_path
   end
 
   def space_params
