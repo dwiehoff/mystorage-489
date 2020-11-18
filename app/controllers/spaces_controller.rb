@@ -31,9 +31,7 @@ class SpacesController < ApplicationController
   def destroy
   end
 
-  private 
-
   def space_params
-    params.require(:space).permit(:location, :volume, :price_per_month, :condition, :access, :user_id, :description, :created_at, :updated_at)
+    params.require(:space).permit(:location, :volume, :condition, :access, :price_per_month, :user, :description, :image)
   end
 end

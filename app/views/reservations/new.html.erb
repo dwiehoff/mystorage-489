@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>Let´s reserve your space!</h1>
+      <%= simple_form_for [@space, @reservation] do |f| %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+        <%= f.submit "Submit booking", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
