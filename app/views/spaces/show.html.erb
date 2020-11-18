@@ -24,10 +24,12 @@
         <div class="date_block">
           <span class="month"><%= reservation.start_date.strftime("%B")[0..2] %></span> <span class="date"><%= reservation.start_date.strftime("%d") %></span>
         </div>
-        <span> – </span>
-        <div class="date_block">
-          <span class="month"><%= reservation.end_date.strftime("%B")[0..2] %></span> <span class="date"><%= reservation.end_date.strftime("%d") %></span>
-        </div>
+        <% unless reservation.start_date == reservation.end_date %>
+          <span> – </span>
+          <div class="date_block">
+            <span class="month"><%= reservation.end_date.strftime("%B")[0..2] %></span> <span class="date"><%= reservation.end_date.strftime("%d") %></span>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
