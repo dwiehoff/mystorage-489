@@ -11,5 +11,28 @@
 // Your CSS partials
 @import "components/index";
 @import "components/card_space";
+@import "components/card_reservations";
+@import "components/footer";
 @import "pages/index";
-@import "components/card_reservations"
+@import "components/banner";
+
+body {
+font-size: 14px;
+line-height: 1.43;
+margin: 0;
+font-family: "Open Sans" !important;
+color: #fca311;
+background-color: #14213d;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Open Sans" !important;
+}
+
+footer {
+  display: block;
+  text-align:center;
+  padding-bottom: 1px;
+  color:white;
+}
+
