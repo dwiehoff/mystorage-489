@@ -1,15 +1,14 @@
 
 <!-- code a "Welcome" section -->
-<div class="banner, text-justify" id="banner">
-<div class="card_text">
+<div class="banner text-justify" id="banner">
+
   <%= image_tag "images.jpeg" %>
-  <p><strong>Having trouble to get rid of all your Favorite Records?</strong> </p>
+  <h1><strong>Having trouble to get rid of all your Favorite Records?</strong> </h1>
   <p>Just store them somewhere else </p>
   </div>
-  <a href="http://localhost:3000/spaces" class="btn btn-primary">Let's store!</a>
+  <%= link_to "Let's store!", spaces_path, class:"btn btn-primary"  %>
   <br>
 <h2 class="text-center">Might be interesting...</h2>
-</div>
 <!-- code a "Cards" section -->
 <br>
 
