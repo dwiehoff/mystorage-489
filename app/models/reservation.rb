@@ -1,6 +1,7 @@
 class Reservation < ApplicationRecord
   belongs_to :space
   belongs_to :user
+  has_one_attached :image
 
   validates :start_date, :end_date, presence: true, availability: true
   validate :end_date_after_start_date
