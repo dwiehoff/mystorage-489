@@ -1,4 +1,15 @@
-    footer {
-      background-color: #474342;
-      height: 100px;
+footer {
+  background-color: #474342;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  p {
+    margin: 0;
+    font-weight: lighter;
+    i {
+      color: #fb254b;
     }
+  }
+}
