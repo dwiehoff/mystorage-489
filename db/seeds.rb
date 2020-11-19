@@ -2,10 +2,10 @@ require 'open-uri'
 
 # Please create user from devise interface first before running seed
 
-# User.destroy_all
+User.destroy_all
 Space.destroy_all
 puts "Cleared space and reservation records"
-
+User.create!(name: "Charline", email: "charline@example.com", password: "123456", description: "owner of spaces in Paris")
 demo_user = User.last
 
 file = URI.open('https://images.unsplash.com/photo-1581143761812-6d1474cdb9d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
