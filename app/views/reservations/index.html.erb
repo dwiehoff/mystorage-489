@@ -1,17 +1,18 @@
-This is the index for Reservations
-
+<h1>Your current reservations</h1>
 <ul id="reservations">
-  <% @reservations.each do |reservation| %>
-    <%= link_to reservations_path(reservation) do  %>
-      <div class="link-wrapper">
-        <li class="card-none mt-3">
-          <% if reservation.space.image.attached? %>
-            <%= cl_image_tag reservation.space.image.key, height: 300, width: 400, crop: :fill %>
-            <%= link_to "Go to this space","spaces/#{reservation.space.id}" %>
-          <% end %>
-        <%= reservation.start_date %>
-        <%= reservation.end_date %>
-      </div>
+  <% @reservations.each do |r| %>
+  <%= link_to space_path(r.space) do  %>
+  <li class="card-none mt-3">
+    <% if r.space.image.attached? %>
+    <%= cl_image_tag r.space.image.key, height: 300, width: 400, crop: :fill, class: 'w-100' %>
     <% end %>
+    <br>
+    <div class="dates text-center">
+      <%= r.start_date.strftime("%B %d") %>
+      <%= ("until #{r.end_date.strftime("%B %d")}") unless r.end_date == r.start_date %>
+      <!-- # link_to "Update Reservation", edit_space_reservation_path(r), class: 'btn btn-primary' -->
+    </div>
+  </li>
+  <% end %>
   <% end %>
 </ul>

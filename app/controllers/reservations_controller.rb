@@ -1,12 +1,14 @@
 class ReservationsController < ApplicationController
-
   def index
-    @reservations = current_user.reservations
+    @reservations = policy_scope(Reservation).where(user: current_user)
+    # @reservations = current_user.reservations
+    # authorize @reservations
   end
 
   def new
     @space = Space.find(params[:space_id])
     @reservation = Reservation.new
+    authorize @reservation
   end
 
   def create
@@ -20,8 +22,9 @@ class ReservationsController < ApplicationController
     else
       render :new
     end
+    authorize @space
   end
-  
+
   private
 
   def reservation_params

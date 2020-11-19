@@ -1,5 +1,4 @@
 class SpacesController < ApplicationController
-
   def index
     @spaces = policy_scope(Space).order(created_at: :desc)
     @markers = @spaces.geocoded.map do |space|
