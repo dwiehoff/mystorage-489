@@ -1,6 +1,7 @@
 <h1>Check out this space!</h1>
 <p>What do you think?</p>
 
+<%= cl_image_tag @space.image.key, height: 300, width: 400, crop: :fill %>
 <ul>
   <%= display_li_if_exists('location', 'Location') %>
   <%= display_li_if_exists('volume', 'Volume', 'm<sup>3</sup>') %>

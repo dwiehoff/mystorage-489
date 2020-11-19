@@ -10,7 +10,9 @@
         <%= f.input :location %>
         <%= f.input :volume, as: :float, hint: 'in m³' %>
         <%= f.input :price_per_month, as: :float, hint: 'in €' %>
-        
+        <%= f.input :condition %>
+        <%= f.input :access %>
+        <%= f.input :description %>
         <%= f.input :image, as: :file %>
         <%= f.button :submit, class: 'btn btn-primary' %>
       <% end %>
