@@ -16,9 +16,11 @@
 
 <%= link_to "VIEW ALL SPACES", spaces_path, class: 'btn btn-outline-secondary' %>
 <% if policy(@space).destroy? %>
-<%= link_to 'DELETE THIS PLACE', space_path(@space), class: 'btn btn-outline-secondary', method: :delete, data: { confirm: "Are you sure you want to delete this space?" } %>
+  <%= link_to 'DELETE THIS PLACE', space_path(@space), class: 'btn btn-outline-secondary', method: :delete, data: { confirm: "Are you sure you want to delete this space?" } %>
 <% end %>
-<%= link_to "UPDATE/EDIT", edit_space_path(@space), class: 'btn btn-outline-secondary' %>
+<% if policy(@space).update? %>
+  <%= link_to "UPDATE/EDIT", edit_space_path(@space), class: 'btn btn-outline-secondary' %>
+<% end %>
 <%= link_to "BOOK THIS SPACE", new_space_reservation_path(@space), class: 'btn btn-primary' %>
 
 
