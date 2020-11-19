@@ -21,14 +21,14 @@ class SpacesController < ApplicationController
 
   def create
     @space = Space.new(space_params)
-    authorize @space
     @space.user = current_user
     if @space.save
-      flash[:notice] = 'space added!'
+      flash[:notice] = 'space has been created'
       redirect_to space_path(@space)
     else
       render :new
     end
+    authorize @space
   end
 
   def edit
