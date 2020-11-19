@@ -1,5 +1,9 @@
 class ReservationsController < ApplicationController
 
+  def index
+    @reservations = current_user.reservations
+  end
+
   def new
     @space = Space.find(params[:space_id])
     @reservation = Reservation.new
@@ -17,7 +21,7 @@ class ReservationsController < ApplicationController
       render :new
     end
   end
-
+  
   private
 
   def reservation_params
