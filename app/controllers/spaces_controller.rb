@@ -2,6 +2,13 @@ class SpacesController < ApplicationController
 
   def index
     @spaces = Space.all # all spaces, available or not
+
+    @markers = @spaces.geocoded.map do |space|
+      {
+        lat: space.latitude,
+        lng: space.longitude
+      }
+    end
   end
 
   def show

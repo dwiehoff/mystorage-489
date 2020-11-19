@@ -1,5 +1,11 @@
 <h1>Available spaces</h1> <!-- includes those currently rented out #index view -->
 
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
 <ul id="spaces">
   <% @spaces.each do |s| %>
     <%= link_to space_path(s) do  %>
