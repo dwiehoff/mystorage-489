@@ -1,4 +1,13 @@
-<h1>Available spaces</h1> <!-- includes those currently rented out #index view -->
+<div class="d-flex mb-3 align-items-center">
+  <h1>Available spaces</h1> <!-- includes those currently rented out #index view -->
+  <%= link_to "Add your space", new_space_path, class: 'btn btn-primary ml-3' %>
+</div>
+
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 
 <ul id="spaces">
   <% @spaces.each do |s| %>
@@ -18,6 +27,4 @@
     <% end %>
   <% end %>
 </ul>
-
-<%= link_to "Add your space", new_space_path, class: 'btn btn-primary' %>
 

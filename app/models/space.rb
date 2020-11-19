@@ -7,4 +7,7 @@ class Space < ApplicationRecord
   validates :volume, numericality: { greater_than: 0 }
   validates :price_per_month, numericality: { greater_than: 0 }
   validates :user, presence: true
+
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end

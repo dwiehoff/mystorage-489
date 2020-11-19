@@ -1,7 +1,13 @@
 class SpacesController < ApplicationController
-
   def index
-    @spaces = Space.all
+    @spaces = Space.all # all spaces, available or not
+
+    @markers = @spaces.geocoded.map do |space|
+      {
+        lat: space.latitude,
+        lng: space.longitude
+      }
+    end
   end
 
   def show
@@ -24,9 +30,13 @@ class SpacesController < ApplicationController
   end
 
   def edit
+    @space = Space.find(params[:id])
   end
 
   def update
+    @space = Space.find(params[:id])
+    @space.update(space_params)
+    redirect_to space_path(@space)
   end
 
   def destroy
