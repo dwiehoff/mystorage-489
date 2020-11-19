@@ -1,0 +1,17 @@
+This is the index for Reservations
+
+<ul id="reservations">
+  <% @reservations.each do |reservation| %>
+    <%= link_to reservations_path(reservation) do  %>
+      <div class="link-wrapper">
+        <li class="card-none mt-3">
+          <% if reservation.space.image.attached? %>
+            <%= cl_image_tag reservation.space.image.key, height: 300, width: 400, crop: :fill %>
+            <%= link_to "Go to this space","spaces/#{reservation.space.id}" %>
+          <% end %>
+        <%= reservation.start_date %>
+        <%= reservation.end_date %>
+      </div>
+    <% end %>
+  <% end %>
+</ul>
