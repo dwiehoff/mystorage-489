@@ -1,7 +1,7 @@
 class SpacesController < ApplicationController
-  def index
-    @spaces = Space.all # all spaces, available or not
 
+  def index
+    @spaces = policy_scope(Space).order(created_at: :desc)
     @markers = @spaces.geocoded.map do |space|
       {
         lat: space.latitude,
@@ -16,10 +16,12 @@ class SpacesController < ApplicationController
 
   def new
     @space = Space.new
+    authorize @space
   end
 
   def create
     @space = Space.new(space_params)
+    authorize @space
     @space.user = current_user
     if @space.save
       flash[:notice] = 'space added!'
