@@ -1,6 +1,7 @@
 <h1>Check out this space!</h1>
 <p>What do you think?</p>
 
+<%= cl_image_tag @space.image.key, height: 300, width: 400, crop: :fill %>
 <ul>
   <li><strong>Location:</strong> <%= @space.location %></li>
   <li><strong>Volume:</strong> <%= @space.volume %> m<sup>3</sup></li>

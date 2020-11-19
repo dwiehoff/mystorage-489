@@ -1,5 +1,4 @@
 class SpacesController < ApplicationController
-
   def index
     @spaces = Space.all # all spaces, available or not
 
