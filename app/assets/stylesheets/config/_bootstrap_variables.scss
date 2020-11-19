@@ -23,3 +23,9 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+small.text-muted {
+  color: #fca3119c !important;
+}
+.form-control-file {
+  border: 1px solid black;
+}
