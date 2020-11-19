@@ -1,2 +1,43 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<!-- code a "Welcome" section -->
+<div class="banner text-justify" id="banner">
+
+  <%= image_tag "images.jpeg" %>
+  <h1><strong>Having trouble to get rid of all your Favorite Records?</strong> </h1>
+  <p>Just store them somewhere else </p>
+  </div>
+  <%= link_to "Let's store!", spaces_path, class:"btn btn-primary"  %>
+  <br>
+<h2 class="text-center">Might be interesting...</h2>
+<!-- code a "Cards" section -->
+<br>
+
+<div class="container">
+
+    <div class="cards">
+
+      <div class="card">
+        <%= image_tag "images-2.jpg" %>
+        <!-- <img src="images/images-2.jpeg" style="background-image: " alt=""> -->
+        <p>Rent my Garage</p>
+        <p> 5€/m3</p>
+      </div>
+
+      <div class="card">
+        <%= image_tag "images-1.jpg" %>
+        <p>Nice Storagespace for Electronics</p>
+        <p> 5€/m3</p>
+      </div>
+
+      <div class="card">
+        <%= image_tag "images-3.jpg" %>
+        <p>Munich available 6 Months</p>
+        <p> 5€/m3</p>
+      </div>
+    </div>
+    <div>
+    <h3> some extra info/features</h3>
+    </div>
+  </div>
+
+
