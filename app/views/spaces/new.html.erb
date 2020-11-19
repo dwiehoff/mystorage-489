@@ -10,13 +10,14 @@
         <%= f.input :condition %>
         <%= f.input :access %>
         <%= f.input :description %>
-        <div class="form-group file optional space_image"><label class="file optional" for="space_image">Image</label>
-          <br>
-        <label class="btn btn-secondary btn-block">
-            Browse <input class="form-control-file file optional" type="file" name="space[image]" id="space_image" hidden>
+
+        <label class="btn btn-secondary btn-block mt-5">
+          Choose Image
+          <span style="display:none;">
+            <%= f.input :image, required: false, multiple: false, input_html: { accept: 'image/*' } %>
+          </span>
         </label>
-        <% # TODO: JS on file selection %>
-        </div>
+        <!-- # TODO: JS on file selection -->
         <%= f.button :submit, class: 'btn btn-primary btn-block btn-lg mt-5' %>
       <% end %>
     </div>
