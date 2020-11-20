@@ -1,3 +1,64 @@
+// prev version card_reservations
+
+/* line 5, app/assets/stylesheets/components/_card_reservations.scss */
+div .month {
+  font-size: 0.3em;
+  font-weight: lighter;
+}
+
+/* line 9, app/assets/stylesheets/components/_card_reservations.scss */
+div .date {
+  font-size: 0.8em;
+  font-weight: bolder;
+  color: #0000f6;
+  /*padding-left: 5px;*/
+}
+
+/* line 20, app/assets/stylesheets/components/_card_reservations.scss */
+div.date_block {
+  background-color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 6px 2px;
+  border-radius: 8px;
+  width: 80px;
+  height: 80px;
+  font-size: 38px;
+  flex-direction: column;
+  text-align: center;
+  transition: opacity 0.15s linear 0s;
+}
+
+/* line 36, app/assets/stylesheets/components/_card_reservations.scss */
+div.date_block:hover {
+  background-color: #0000f6;
+  color: white;
+}
+
+/* line 40, app/assets/stylesheets/components/_card_reservations.scss */
+div.date_block:hover .date {
+  color: white;
+}
+
+/* line 44, app/assets/stylesheets/components/_card_reservations.scss */
+.reserved_date {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+
+// cards space scss
+
+
 ul#spaces {
   padding-left: 15px;
 }
