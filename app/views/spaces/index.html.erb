@@ -16,7 +16,7 @@
               <% end %>
               <ul class="card-space-details">
                 <li><strong>Location</strong> <br> <%= s.location.split(',')[0] %></li>
-                <li><strong>Volume</strong> <br> <%= s.volume.round(1) %> m<sup>3</sup></li>
+                <li><strong>Volume (max)</strong> <br> <%= s.volume.round(1) %> m<sup>3</sup></li>
                 <li><strong>Price (per month)</strong> <br> <%= sprintf('%.2f', s.price_per_month) %> &euro;</li>
               </ul>
             </li>
