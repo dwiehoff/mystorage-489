@@ -3,7 +3,7 @@ import mapboxgl from 'mapbox-gl';
 const mapElement = document.getElementById('map');
 
 const buildMap = () => {
-  mapboxgl.accessToken = "pk.eyJ1IjoibG91aWxvdWkiLCJhIjoiY2tnd2E0ZjN3MDAzYTMwb3N4dnUzaW50OCJ9.oBdL59sum0OrN19X7ekuZA";
+  mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v10'

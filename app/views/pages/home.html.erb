@@ -1,43 +1,42 @@
-
-<!-- code a "Welcome" section -->
-<div class="banner text-justify" id="banner">
-
-  <%= image_tag "images.jpeg" %>
-  <h1><strong>Having trouble to get rid of all your Favorite Records?</strong> </h1>
+<div class="banner full-width" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)), url(<%=image_url('https://images.unsplash.com/photo-1522832712787-3fbd36c9fe2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80')%>);"> <!-- cl_image_tag('rhfx9tpaqrcmgex5kikq') -->
+  <!-- TODO: feel free to add a different image => unsplash, pexels, etc. -->
+  <h1><strong>Having trouble to get rid of all your Favorite Records?</strong></h1>
   <p>Just store them somewhere else </p>
-  </div>
-  <%= link_to "Let's store!", spaces_path, class:"btn btn-primary"  %>
-  <br>
+  <%= link_to "Checkout some spaces!", spaces_path, class:"btn btn-primary"  %>
+</div>
+<br>
+<br>
+<br>
+<br>
+
 <h2 class="text-center">Might be interesting...</h2>
 <!-- code a "Cards" section -->
 <br>
+<br>
 
-<div class="container">
-
-    <div class="cards">
+  <div class="cards">
 
       <div class="card">
-        <%= image_tag "images-2.jpg" %>
+        <%= cl_image_tag('ugxqs41rtj6q87x73gew') %>
         <!-- <img src="images/images-2.jpeg" style="background-image: " alt=""> -->
         <p>Rent my Garage</p>
-        <p> 5€/m3</p>
+        <p>5€/m<sup>3</sup></p>
       </div>
 
       <div class="card">
-        <%= image_tag "images-1.jpg" %>
+        <%= cl_image_tag('jsah1kcw3jwlnlsdyguq') %>
         <p>Nice Storagespace for Electronics</p>
-        <p> 5€/m3</p>
+        <p>5€/m<sup>3</sup></p>
       </div>
 
       <div class="card">
-        <%= image_tag "images-3.jpg" %>
+        <%= cl_image_tag('t6s1zr8bqpgkeq6dslyv') %>
         <p>Munich available 6 Months</p>
-        <p> 5€/m3</p>
+        <p>5€/m<sup>3</sup></p>
       </div>
     </div>
+
     <div>
-    <h3> some extra info/features</h3>
+    <h3>some extra info/features</h3>
     </div>
-  </div>
-
-
+</div>

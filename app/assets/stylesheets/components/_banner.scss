@@ -1,0 +1,31 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px ;
+  margin-left: 5px;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  color: #fca311;
+}
+
+.banner p {
+  font-size: 20px;
+  color: #fca311;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
