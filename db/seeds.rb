@@ -77,7 +77,7 @@ Reservation.create!(space: space10, user: user1, start_date: Date.parse('20 Nov 
 Reservation.create!(space: space4, user: user1, start_date: Date.parse('5 Dec 2020'), end_date: Date.parse('15 Dec 2020'), is_confirmed: false)
 Reservation.create!(space: space2, user: user3, start_date: Date.parse('10 Nov 2020'), end_date: Date.parse('30 Nov 2020'), is_confirmed: false)
 Reservation.create!(space: space1, user: user4, start_date: Date.parse('10 Nov 2020'), end_date: Date.parse('26 Dec 2020'), is_confirmed: false)
-Reservation.create!(space: space3, user: user5, start_date: Date.parse('28 Dec 2020'), end_date: Date.parse('31 Feb 2021'), is_confirmed: false)
+Reservation.create!(space: space3, user: user5, start_date: Date.parse('28 Dec 2020'), end_date: Date.parse('26 Feb 2021'), is_confirmed: false)
 Reservation.create!(space: space4, user: user2, start_date: Date.parse('17 Dec 2020'), end_date: Date.parse('31 Dec 2020'), is_confirmed: false)
 Reservation.create!(space: space3, user: user1, start_date: Date.parse('1 Jan 2021'), end_date: Date.parse('1 Jun 2021'), is_confirmed: false)
 Reservation.create!(space: space1, user: user1, start_date: Date.parse('1 Jan 2021'), end_date: Date.parse('8 Jan 2021'), is_confirmed: false)
