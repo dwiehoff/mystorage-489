@@ -6,8 +6,13 @@ puts "Cleared space and reservation records"
 
 # USERS
 
-User.create!(name: "Charline", email: "charline@example.com", password: "123456", description: "owner of spaces in Paris")
-User.create!(email: 'demo@email.com', password: '123456', name: 'Demo', description: 'abc')
+User.create!(name: "Charline", email: "charline@test.org", password: "123456", description: "owner of spaces in Paris")
+User.create!(name: "Daniel",email: 'daniel@demo.com', password: '123456', name: 'Demo', description: 'abc')
+User.create!(name: "Louis", email: "loui-loui@hotmail.de", password: "123456")
+User.create!(name: "Alex", email: "alex@lewagon.com", password: "123456")
+User.create!(name: "Dion", email: "dion@lewagon.com", password: "123456")
+
+
 # User for demo
 demo_user = User.last
 
@@ -22,5 +27,20 @@ puts "#{Space.count} spaces in the DB. Last one located at #{Space.last.location
 
 # RESERVATIONS
 
-Reservation.create!(space: Space.last, user: User.last, start_date: Date.parse('17 Nov 2020'), end_date: Date.parse('20 Nov 2020'), is_confirmed: false)
-puts "#{Reservation.count} reservation(s) in the database. Last one from #{Reservation.last.start_date} to #{Reservation.last.end_date}"
+Reservation.create!(space_id: 2, user_id: 2, start_date: Date.parse('17 Nov 2020'), end_date: Date.parse('20 Nov 2020'), is_confirmed: false)
+Reservation.create!(space_id: 10, user_id: 1, start_date: Date.parse('20 Nov 2020'), end_date: Date.parse('20 Dec 2020'), is_confirmed: true)
+Reservation.create!(space_id: 4, user_id: 1, start_date: Date.parse('5 Dec 2020'), end_date: Date.parse('15 Dec 2020'), is_confirmed: false)
+Reservation.create!(space_id: 2, user_id: 3, start_date: Date.parse('10 Nov 2020'), end_date: Date.parse('30 Nov 2020'), is_confirmed: false)
+Reservation.create!(space_id: 1, user_id: 4, start_date: Date.parse('10 Nov 2020'), end_date: Date.parse('26 Dec 2020'), is_confirmed: false)
+Reservation.create!(space_id: 3, user_id: 5, start_date: Date.parse('28 Dec 2020'), end_date: Date.parse('31 Feb 2020'), is_confirmed: false)
+Reservation.create!(space_id: 4, user_id: 2, start_date: Date.parse('17 Dec 2020'), end_date: Date.parse('31 Dec 2020'), is_confirmed: false)
+Reservation.create!(space_id: 3, user_id: 1, start_date: Date.parse('1 Jan 2021'), end_date: Date.parse('1 Jun 2021'), is_confirmed: false)
+Reservation.create!(space_id: 1, user_id: 1, start_date: Date.parse('1 Jan 2021'), end_date: Date.parse('8 Jan 2021'), is_confirmed: false)
+Reservation.create!(space_id: 11, user_id: 2, start_date: Date.parse('23 Dec 2020'), end_date: Date.parse('26 Dec 2020'), is_confirmed: false)
+
+
+
+
+
+
+
