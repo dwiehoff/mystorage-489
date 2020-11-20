@@ -5,13 +5,13 @@
 <br>
 <div class="row">
 <div class="col-6">
-<ul id="spaces">
-  <% @spaces.each do |s| %>
+  <ul id="spaces">
+    <% @spaces.each do |s| %>
     <%= link_to space_path(s) do  %>
     <div class="link-wrapper">
       <li class="card-space mt-3">
         <% if s.image.attached? %>
-          <%= cl_image_tag s.image.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag s.image.key, height: 300, width: 400, crop: :fill %>
         <% end %>
         <ul class="card-space-details">
           <li><strong>Location</strong> <br> <%= s.location.split(',')[0] %></li>
@@ -22,8 +22,9 @@
     </div>
     <% end %>
   <% end %>
-</ul>
+  </ul>
 </div>
+
 <div class="col-6">
 <div id="map"
      style="width: 100%; height: 600px;"
