@@ -6,16 +6,6 @@
     font-size: 0.3em;
     font-weight: lighter;
   }
-  div .date {
-    font-size: 0.8em;
-    font-weight: bolder;
-    color: #0000f6;
-    /*padding-left: 5px;*/
-  }
-
-  div.list {
-
-  }
 
   div.date_block {
     background-color: rgb(255, 255, 255);
@@ -39,6 +29,71 @@
   }
   div.date_block:hover .date {
     color: white;
+  }
+
+  ul#reservations > a {
+    text-decoration: none;
+    color: #0E0000;
+    display: block;
+    max-width: 500px;
+  
+    &:hover .card-reservation {
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+  }
+  
+  .card-reservation {
+    transition: all .3s ease-out;
+  }
+  
+  ul.reservations, ul.card-reservation-details {
+    list-style-type: none;
+    padding-left: none;
+  }
+  
+  .card-reservation {
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  
+    &:first-of-type {
+      margin-top: 30px !important;
+    }
+  
+    img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+  
+    h2 {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
+    }
+  
+    p {
+      font-size: 12px;
+      opacity: .7;
+      margin: 0;
+    }
+  
+    .card-reservation-details {
+      padding: 16px;
+      display: flex;
+      justify-content: reservation-between;
+      align-items: flex-end;
+      position: relative;
+   
+      li:first-of-type {
+        max-width: 225px;
+        overflow: hidden;
+        height: 48px;
+      }
+      li:nth-of-type(2) {
+        min-width: 68px;
+      }
+    }
   }
 
   .reserved_date {
