@@ -6,15 +6,6 @@
     font-size: 0.3em;
     font-weight: lighter;
   }
-  div .date {
-   
-    font-weight: lighter;
-    /*padding-left: 5px;*/
-  }
-
-  div.list {
-
-  }
 
   div.date_block {
     background-color: rgb(255, 255, 255);
@@ -93,9 +84,7 @@
       justify-content: reservation-between;
       align-items: flex-end;
       position: relative;
-      li {
-  
-      }
+   
       li:first-of-type {
         max-width: 225px;
         overflow: hidden;
