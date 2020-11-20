@@ -23,6 +23,7 @@ class SpacesController < ApplicationController
 
   def show
     @space = Space.find(params[:id])
+    # @marker = @space.geocoded_by(:location)
   end
 
   def new
