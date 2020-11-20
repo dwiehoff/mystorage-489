@@ -17,11 +17,12 @@ class SpacesController < ApplicationController
         lat: space.latitude,
         lng: space.longitude
       }
-      end
+    end
   end
 
   def show
     @space = Space.find(params[:id])
+    # @marker = @space.geocoded_by(:location)
   end
 
   def new
