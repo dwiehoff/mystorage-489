@@ -4,8 +4,8 @@ class SpacesController < ApplicationController
     @markers = @spaces.geocoded.map do |space|
       {
         lat: space.latitude,
-        lng: space.longitude,
-        image_url: helpers.image_url('unit_icon.png')
+        lng: space.longitude
+        # image_url: helpers.image_url('unit_icon.png')
       }
     end
   end
