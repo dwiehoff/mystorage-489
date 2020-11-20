@@ -4,13 +4,9 @@
   <%= link_to "Add your space", new_space_path, class: 'btn btn-primary ml-3' %>
  <% end %>
 </div>
-
-<div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-
+<br>
+<div class="row">
+<div class="col-6">
 <ul id="spaces">
   <% @spaces.each do |s| %>
     <%= link_to space_path(s) do  %>
@@ -29,4 +25,13 @@
     <% end %>
   <% end %>
 </ul>
+</div>
+<div class="col-6">
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+</div>
+</div>
 
