@@ -1,2 +1,27 @@
-<h1>Spaces#new</h1>
-<p>Find me in app/views/spaces/new.html.erb</p>
+<h1 class="text-center mb-4">Space details</h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <%= simple_form_for @space do |f| %>
+        <%= f.input :location %>
+        <%= f.input :volume, as: :float, hint: 'in m³' %>
+        <%= f.input :price_per_month, as: :float, hint: 'in €' %>
+        <%= f.input :condition %>
+        <%= f.input :access %>
+        <%= f.input :description %>
+
+        <label class="btn btn-secondary btn-block mt-5">
+          Choose Image
+          <span style="display:none;">
+            <%= f.input :image, required: false, multiple: false, input_html: { accept: 'image/*' } %>
+          </span>
+        </label>
+        <!-- # TODO: JS on file selection -->
+        <%= f.button :submit, class: 'btn btn-primary btn-block btn-lg mt-5' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+

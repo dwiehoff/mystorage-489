@@ -7,6 +7,7 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import 'mapbox-gl/dist/mapbox-gl';
 
 // Your CSS partials
 @import "components/index";
@@ -15,6 +16,8 @@
 @import "components/footer";
 @import "pages/index";
 @import "components/banner";
+
+@import 'reservations';
 
 body {
 font-size: 14px;
@@ -27,12 +30,5 @@ background-color: #14213d;
 
 h1, h2, h3, h4 {
   font-family: "Open Sans" !important;
-}
-
-footer {
-  display: block;
-  text-align:center;
-  padding-bottom: 1px;
-  color:white;
 }
 
