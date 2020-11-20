@@ -9,6 +9,17 @@ class SpacesController < ApplicationController
     end
   end
 
+  def my_spaces
+    @spaces = policy_scope(Space).order(created_at: :desc).where(user: current_user)
+    authorize @spaces
+    @markers = @spaces.geocoded.map do |space|
+      {
+        lat: space.latitude,
+        lng: space.longitude
+      }
+      end
+  end
+
   def show
     @space = Space.find(params[:id])
   end

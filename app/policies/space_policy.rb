@@ -2,7 +2,12 @@ class SpacePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
+      # scope.where(user: current_user)
     end
+  end
+
+  def my_spaces?
+    return true
   end
 
   def show?
