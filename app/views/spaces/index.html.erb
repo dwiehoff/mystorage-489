@@ -2,35 +2,34 @@
   <h1>Available spaces</h1> <!-- includes those currently rented out #index view -->
   <%= link_to "Add your space", new_space_path, class: 'btn btn-primary ml-3' %>
 </div>
-<br>
 <div class="row">
-<div class="col-6">
-  <ul id="spaces">
-    <% @spaces.each do |s| %>
-    <%= link_to space_path(s) do  %>
-    <div class="link-wrapper">
-      <li class="card-space mt-3">
-        <% if s.image.attached? %>
-        <%= cl_image_tag s.image.key, height: 300, width: 400, crop: :fill %>
-        <% end %>
-        <ul class="card-space-details">
-          <li><strong>Location</strong> <br> <%= s.location.split(',')[0] %></li>
-          <li><strong>Volume</strong> <br> <%= s.volume.round(1) %> m<sup>3</sup></li>
-          <li><strong>Price (per month)</strong> <br> <%= sprintf('%.2f', s.price_per_month) %> &euro;</li>
-        </ul>
-      </li>
-    </div>
+  <div class="col-6">
+    <ul id="spaces">
+      <% @spaces.each do |s| %>
+        <%= link_to space_path(s) do  %>
+          <div class="link-wrapper">
+           <li class="card-space">
+              <% if s.image.attached? %>
+                <%= cl_image_tag s.image.key, height: 300, width: 400, crop: :fill %>
+              <% end %>
+              <ul class="card-space-details">
+                <li><strong>Location</strong> <br> <%= s.location.split(',')[0] %></li>
+                <li><strong>Volume</strong> <br> <%= s.volume.round(1) %> m<sup>3</sup></li>
+                <li><strong>Price (per month)</strong> <br> <%= sprintf('%.2f', s.price_per_month) %> &euro;</li>
+              </ul>
+            </li>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
-  </ul>
-</div>
+    </ul>
+  </div>
 
-<div class="col-6">
-<div id="map"
+  <div class="col-6">
+    <div id="map"
      style="width: 100%; height: 600px;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-</div>
+    </div>
+  </div>
 </div>
 
