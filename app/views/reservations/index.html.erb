@@ -4,9 +4,9 @@
    <% @reservations.each do |r| %>
     <%= link_to space_path(r.space) do  %>
     <div class="link-wrapper">
-      <li class="card-reservation mt-3">
+      <li class="card-space mt-3">
         <% if r.space.image.attached? %>
-    <%= cl_image_tag r.space.image.key, height: 300, width: 400, crop: :fill, class: 'w-100' %>
+          <%= cl_image_tag r.space.image.key, height: 300, width: 400, crop: :fill, class: 'w-100' %>
         <% end %>
         <ul class="card-space-details">
           <li><strong>Location</strong> <br> <%= r.space.location.split(',')[0] %></li>
