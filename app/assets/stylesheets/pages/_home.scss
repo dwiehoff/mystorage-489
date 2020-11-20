@@ -1,8 +1,10 @@
 // Specific CSS for your home-page
 @import "components/card_home";
-.container {
+.col-6 {
+  margin-top: none;
 }
 
-
-
-
+.banner {
+  position: relative;
+  top: -18px;
+}

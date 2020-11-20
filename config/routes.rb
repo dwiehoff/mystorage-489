@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :spaces do
+    collection do
+      get :my_spaces
+    end
     resources :reservations, only: [:new, :create, :index, :show]
   end
   get "reservations", to: 'reservations#index'

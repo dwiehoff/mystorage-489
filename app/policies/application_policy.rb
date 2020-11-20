@@ -10,6 +10,10 @@ class ApplicationPolicy
     false
   end
 
+  def my_spaces?
+    false
+  end
+
   def show?
     false
   end
