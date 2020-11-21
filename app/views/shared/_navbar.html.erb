@@ -8,16 +8,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-      <li class="nav-item ">
+      <li class="nav-item <%= 'active' if current_page?(root_path) %>">
         <%= link_to "Home", root_path, class: "nav-link" %>
       </li>
-      <li class="nav-item">
+      <li class="nav-item <%= 'active' if current_page?(reservations_path) %>">
         <%= link_to "My Reservations", reservations_path, class: "nav-link" %>
       </li>
-      <li class="nav-item">
+      <li class="nav-item <%= 'active' if current_page?(spaces_path) %>">
         <%= link_to "All Spaces", spaces_path, class: "nav-link" %>
       </li>
-      <li class="nav-item">
+      <li class="nav-item <%= 'active' if current_page?(my_spaces_spaces_path) %>">
         <%= link_to "My Spaces", my_spaces_spaces_path, class: "nav-link" %>
       </li>
       <li class="nav-item dropdown" style="cursor: pointer;">
