@@ -1,0 +1,20 @@
+.img-space {
+  width: 100%;
+  border-radius: 15px;
+}
+.map-space img {
+  border-radius: 15px;
+}
+.details {
+  border-radius: 15px;
+  .list-group-item {
+    height: 42px;
+  }
+}
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+}
+.list-group-item > strong {
+  font-weight: bolder;
+}
