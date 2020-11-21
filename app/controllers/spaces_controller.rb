@@ -11,7 +11,7 @@ class SpacesController < ApplicationController
   end
 
   def my_spaces
-    @spaces = policy_scope(Space).order(created_at: :desc).where(user: current_user)
+    @spaces = policy_scope(Space).order(created_at: :desc).where(user_id: current_user.id)
     authorize @spaces
     @markers = @spaces.geocoded.map do |space|
       {
