@@ -1,6 +1,7 @@
 class Space < ApplicationRecord
   belongs_to :user
   has_many :reservations, dependent: :destroy
+  has_many :unreservable_dates
   has_one_attached :image
 
   validates :location, presence: true
